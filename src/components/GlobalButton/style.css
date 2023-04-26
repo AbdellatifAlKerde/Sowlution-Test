@@ -1,0 +1,15 @@
+.global-button button {
+  padding: 15px;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  background-color: #355276;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+.global-button:hover {
+  background-color: #35527698;
+}

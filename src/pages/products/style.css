@@ -1,0 +1,87 @@
+/* Designing the Cards */
+.cards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 300px;
+  box-shadow: 0 4px 15px #99999973;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card:hover {
+  scale: 1.01;
+}
+
+.card:hover img {
+  scale: 1.05;
+}
+
+.image img {
+  object-fit: contain;
+  transition: 0.5s;
+}
+
+.description {
+  padding: 10px 20px;
+  height: 150px;
+}
+
+.description h2 {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.description p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.order {
+  width: 100%;
+}
+
+.order button {
+  padding: 15px;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  background-color: #355276;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+.order button:hover {
+  background-color: #35527698;
+}
+
+/* Design the hero section */
+.hero-section {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images//diagonal-hero-image-layout.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  color: #fff;
+}
