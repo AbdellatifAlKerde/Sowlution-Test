@@ -11,22 +11,22 @@ function Products() {
   const [isLoading, setIsLoading] = useState(false);
   const [showCard, setShowCard] = useState(false);
   const [eachData, setEachData] = useState([]);
-
   // Fetching data from the database using Axios
   const fetchData = async () => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        "https://api.manoapp.com/api/v1/users/products/whats_new",
+        `${process.env.REACT_APP_URL}/api/v1/users/products/whats_new`,
         {
           // Put the headers so we can get the data
           headers: {
-            StoreID: 4,
-            Authorization: "f44a4aabfc5992514d262d7f517327e7",
-            UserAddressID: 60877,
+            StoreID: process.env.REACT_APP_STORE_ID,
+            Authorization: process.env.REACT_APP_AUTHORIZATION,
+            UserAddressID: process.env.REACT_APP_USER_ADDRESS,
           },
         }
       );
+
       // Set the data to the data state the we inititate first
       setData(response.data.data.items);
       setIsLoading(false);
